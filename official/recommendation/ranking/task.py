@@ -133,7 +133,7 @@ class RankingTask(base_task.Task):
         decay_steps=lr_config.decay_steps,
         decay_start_steps=lr_config.decay_start_steps)
 
-    dense_optimizer = tf.keras.optimizers.legacy.Adam()
+    dense_optimizer = tf.keras.optimizers.Adam()
     embedding_optimizer = tf.keras.optimizers.get(
         self.optimizer_config.embedding_optimizer, use_legacy_optimizer=True)
     embedding_optimizer.learning_rate = lr_callable

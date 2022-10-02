@@ -228,11 +228,11 @@ class TrainerWithMaskedLMTaskTest(tf.test.TestCase, parameterized.TestCase):
     if mixed_precision_dtype != 'float16':
       self.assertIsInstance(
           trainer.optimizer,
-          (tf.keras.optimizers.SGD, tf.keras.optimizers.legacy.SGD))
+          (tf.keras.optimizers.SGD, tf.keras.optimizers.SGD))
     elif mixed_precision_dtype == 'float16' and loss_scale is None:
       self.assertIsInstance(
           trainer.optimizer,
-          (tf.keras.optimizers.SGD, tf.keras.optimizers.legacy.SGD))
+          (tf.keras.optimizers.SGD, tf.keras.optimizers.SGD))
 
     metrics = trainer.train(tf.convert_to_tensor(5, dtype=tf.int32))
     self.assertIn('training_loss', metrics)
