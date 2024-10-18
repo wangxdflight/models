@@ -12,15 +12,15 @@ REQUIRED_PACKAGES = [
     'matplotlib',
     'Cython',
     'contextlib2',
-    'tf-slim',
+    'tf-slim==1.1.0',
     'six',
     'pycocotools',
     'lvis',
     'scipy',
     'pandas',
-    'tf-models-official',
-    'tensorflow_io',
-    'keras',
+    'tf-models-official==2.10.0',
+    'tensorflow_io==0.27.0',
+    'keras==2.10.0',
     'pyparsing==2.4.7',  # TODO(b/204103388)
     'sacrebleu<=2.2.0'  # https://github.com/mjpost/sacrebleu/issues/209
 ]
